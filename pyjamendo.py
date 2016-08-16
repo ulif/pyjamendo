@@ -18,11 +18,11 @@ import json
 import logging
 import sys
 if sys.version_info.major >= 3:
-	from urllib.parse import urlencode
-	from urllib.request import urlopen
+    from urllib.parse import urlencode
+    from urllib.request import urlopen
 elif sys.version_info.major == 2:
-	from urllib import urlencode
-	from urllib import urlopen
+    from urllib import urlencode
+    from urllib import urlopen
 
 BASE_URL = 'https://api.jamendo.com/v3.0'
 CLIENT_ID = '56d30c95'  # for testing only
@@ -44,7 +44,7 @@ def call_api(path, params):
 # logging.basicConfig(level=logging.DEBUG)
 result = call_api('radios/', dict())
 radios = result['results']
-print("#EXTM3U");
+print("#EXTM3U")
 for station in radios:
     logger.info('Handling station: %s' % station)
     details = call_api(
