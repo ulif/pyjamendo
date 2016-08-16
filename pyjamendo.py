@@ -16,9 +16,13 @@
 #
 import json
 import logging
-import urllib.parse
-import urllib.request
-
+import sys
+if sys.version_info.major >= 3:
+	from urllib.parse import urlencode
+	from urllib.request import urlopen
+elif sys.version_info.major == 2:
+	from urllib import urlencode
+	from urllib import urlopen
 
 BASE_URL = 'https://api.jamendo.com/v3.0'
 CLIENT_ID = '56d30c95'  # for testing only
@@ -29,10 +33,10 @@ logger.addHandler(logging.NullHandler())
 
 def call_api(path, params):
     params.update(dict(client_id=CLIENT_ID, format='jsonpretty'))
-    params = urllib.parse.urlencode(params)
+    params = urlencode(params)
     url = '%s/%s?%s' % (BASE_URL, path, params)
     logger.info('Calling %s' % url)
-    resp = urllib.request.urlopen(url)
+    resp = urlopen(url)
     return json.loads(resp.read().decode('utf-8'))
 
 
