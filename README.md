@@ -25,12 +25,13 @@ You might want to change the CLIENT_ID set in the script.
 Afterwards, just do
 
     $ python pyjamendo.py
-	#EXTINF -1, Jamendo - Best Of Jamendo Radio
-	http://streaming.jamendo.com/JamBestOf
-	#EXTINF -1, Jamendo - Electronic Radio
-	http://streaming.jamendo.com/JamElectro
-	#EXTINF -1, Jamendo - Rock Radio
-	http://streaming.jamendo.com/JamRock
-	...
+        #EXTM3U
+        #EXTINF:-1, Jamendo - Best Of Jamendo Radio
+        http://streaming.jamendo.com/JamBestOf
+        #EXTINF:-1, Jamendo - Electronic Radio
+        http://streaming.jamendo.com/JamElectro
+        #EXTINF:-1, Jamendo - Rock Radio
+        http://streaming.jamendo.com/JamRock
+        ...
 
 You can save the result as an m3u file.
