@@ -35,3 +35,5 @@ Afterwards, just do
         ...
 
 You can save the result as an m3u file.
+
+Kudos to @schuellerf for fixing the output file format!
