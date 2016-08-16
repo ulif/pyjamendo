@@ -40,6 +40,7 @@ def call_api(path, params):
 # logging.basicConfig(level=logging.DEBUG)
 result = call_api('radios/', dict())
 radios = result['results']
+print("#EXTM3U");
 for station in radios:
     logger.info('Handling station: %s' % station)
     details = call_api(
@@ -48,5 +49,5 @@ for station in radios:
     details = details['results']
     for stream_descr in details:
         stream_url = stream_descr['stream'].replace('https:', 'http:')
-        print("#EXTINF -1, Jamendo - %s\n%s" % (
+        print("#EXTINF:-1, Jamendo - %s\n%s" % (
             stream_descr['dispname'], stream_url))
