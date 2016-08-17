@@ -1,7 +1,5 @@
 # List radio streams from jamendo.com.
 #
-# Requires Python 3.x.
-#
 # Jamendo distributes free music. It is free for private use.
 #
 # It also provides a couple of radio stations.
