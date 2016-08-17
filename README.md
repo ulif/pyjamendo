@@ -4,7 +4,7 @@ List radio streams streamed by jamendo.com.
 ## What's this?
 
 https://jamendo.com/ distributes free music whereas "free" is defined
-as in this [faq](https://www.jamendo.com/faq).
+as in [this faq](https://www.jamendo.com/faq).
 
 It also operates a couple of internet radios streaming free music.
 
@@ -12,10 +12,11 @@ This script uses jamendo API (v3) to determine the URLs of radio
 streams. They are printed in a form suitable for m3u files. See
 https://developer.jamendo.com/v3.0/read-methods for docs.
 
-I use the listed URLs to create m3u files which are then fed to
-`cmus`, my commandline music player. As `cmus` refuses to stream https
-URLs, the script displays only ordinary, unencrypted http URLs. This
-is a shortcoming of `cmus` not of jamendo.
+I use the listed URLs to create [extended m3u files]
+(https://en.wikipedia.org/wiki/M3U) which are then fed to `cmus`, my
+commandline music player. As `cmus` refuses to stream https URLs, the
+script displays only ordinary, unencrypted http URLs. This is a
+shortcoming of `cmus` not of jamendo.
 
 
 ## How to run
@@ -34,6 +35,6 @@ Afterwards, just do
         http://streaming.jamendo.com/JamRock
         ...
 
-You can save the result as an m3u file.
+You can save the result as an `.m3u` file.
 
 Kudos to @schuellerf for fixing the output file format!
