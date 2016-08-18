@@ -26,6 +26,8 @@ CLIENT_ID = '56d30c95'  # for testing only
 
 logger = logging.getLogger('pyjamendo')
 logger.addHandler(logging.NullHandler())
+## Uncomment for debugging
+# logging.basicConfig(level=logging.DEBUG)
 
 
 def call_api(path, params):
@@ -37,18 +39,21 @@ def call_api(path, params):
     return json.loads(resp.read().decode('utf-8'))
 
 
-## Uncomment for debugging
-# logging.basicConfig(level=logging.DEBUG)
-result = call_api('radios/', dict())
-radios = result['results']
-print("#EXTM3U")
-for station in radios:
-    logger.info('Handling station: %s' % station)
-    details = call_api(
-        'radios/stream/', dict(name=station['name']))
-    logger.info('Station Details: %s' % details)
-    details = details['results']
-    for stream_descr in details:
-        stream_url = stream_descr['stream'].replace('https:', 'http:')
-        print("#EXTINF:-1, Jamendo - %s\n%s" % (
-            stream_descr['dispname'], stream_url))
+def jam_radios_to_m3u():
+    result = call_api('radios/', dict())
+    radios = result['results']
+    print("#EXTM3U")
+    for station in radios:
+        logger.info('Handling station: %s' % station)
+        details = call_api(
+            'radios/stream/', dict(name=station['name']))
+        logger.info('Station Details: %s' % details)
+        details = details['results']
+        for stream_descr in details:
+            stream_url = stream_descr['stream'].replace('https:', 'http:')
+            print("#EXTINF:-1, Jamendo - %s\n%s" % (
+                stream_descr['dispname'], stream_url))
+
+
+if __name__ == "__main__":
+    jam_radios_to_m3u()
