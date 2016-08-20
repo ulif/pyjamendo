@@ -18,8 +18,7 @@ try:                    # python 3.x
     from urllib.parse import urlencode
     from urllib.request import urlopen
 except ImportError:     # python 2.x
-    from urllib import urlencode
-    from urllib import urlopen
+    from urllib import urlencode, urlopen
 
 BASE_URL = 'https://api.jamendo.com/v3.0'
 CLIENT_ID = '56d30c95'  # for testing only
