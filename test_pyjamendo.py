@@ -7,4 +7,5 @@ def test_jam_radios_to_m3u(capfd):
     out, err = capfd.readouterr()
     assert out.startswith("#EXTM3U")
     assert "EXTINF:-1, " in out
-    assert "https" not in out   # how bad, we can test this
+    assert "https:" not in out   # how bad, we can test this
+    assert "http:" in out
