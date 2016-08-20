@@ -39,6 +39,13 @@ def call_api(path, params):
 
 
 def jam_radios_to_m3u():
+    """Prints an EXTM3U-formatted list of jamendo radio stations.
+
+    Jamendo web API is used to ask and list the stations in a format
+    suitable for players like `winamp`, `cmus`, etc.
+
+    Requires online connection.
+    """
     result = call_api('radios/', dict())
     radios = result['results']
     print("#EXTM3U")
