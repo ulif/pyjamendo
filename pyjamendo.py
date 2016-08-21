@@ -20,6 +20,8 @@ try:                    # python 3.x
 except ImportError:     # python 2.x
     from urllib import urlencode, urlopen
 
+__version__ = "0.1.1.dev0"
+
 BASE_URL = 'https://api.jamendo.com/v3.0'
 CLIENT_ID = '56d30c95'  # for testing only
 
