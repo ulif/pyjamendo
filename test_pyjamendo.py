@@ -4,6 +4,7 @@ import pytest
 import pyjamendo
 from pyjamendo import jam_radios_to_m3u
 
+
 def fake_urlopen(url):
     from io import BytesIO
     if "radios/?" in url:
@@ -39,14 +40,14 @@ SAMPLE_RADIOS_RESP = b'''
                         "name":"bestof",
                         "dispname":"Best Of Jamendo Radio",
                         "type":"www",
-                        "image":"https:\/\/imgjam2.jamendo.com\/new_jamendo_radios\/bestof150.jpg"
+    "image":"https:\/\/imgjam2.jamendo.com\/new_jamendo_radios\/bestof150.jpg"
             },
             {
-                                                                                                                                                                                                                 "id":2,
+                        "id":2,
                         "name":"electro",
                         "dispname":"Electronic Radio",
                         "type":"www",
-                        "image":"https:\/\/imgjam1.jamendo.com\/new_jamendo_radios\/electro150.jpg"
+   "image":"https:\/\/imgjam1.jamendo.com\/new_jamendo_radios\/electro150.jpg"
             }
        ]
 }
@@ -68,7 +69,7 @@ SAMPLE_RADIO_ENTRY_BESTOF = b'''
             "name":"bestof",
             "dispname":"Best Of Jamendo Radio",
             "type":"www",
-            "image":"https:\/\/imgjam1.jamendo.com\/new_jamendo_radios\/bestof150.jpg",
+ "image":"https:\/\/imgjam1.jamendo.com\/new_jamendo_radios\/bestof150.jpg",
             "stream":"https:\/\/streaming.jamendo.com\/JamBestOf",
             "playingnow":{
                 "track_id":"132859",
@@ -76,7 +77,8 @@ SAMPLE_RADIO_ENTRY_BESTOF = b'''
                 "album_id":"18775",
                 "album_name":"royal goulasch",
                 "track_name":"La petite reine",
-                "track_image":"https:\/\/imgjam.jamendo.com\/albums\/s18\/18775\/covers\/1.200.jpg",
+ "track_image":
+   "https:\/\/imgjam.jamendo.com\/albums\/s18\/18775\/covers\/1.200.jpg",
                 "artist_name":"Royal Goulasch"
             },
             "callmeback":"82000"
@@ -100,7 +102,7 @@ SAMPLE_RADIO_ENTRY_ELECTRO = b'''
             "name":"electro",
             "dispname":"Electronic Radio",
             "type":"www",
-            "image":"https:\/\/imgjam1.jamendo.com\/new_jamendo_radios\/electro150.jpg",
+   "image":"https:\/\/imgjam1.jamendo.com\/new_jamendo_radios\/electro150.jpg",
             "stream":"https:\/\/streaming.jamendo.com\/JamElectro",
             "playingnow":{
                 "track_id":"552164",
@@ -108,7 +110,8 @@ SAMPLE_RADIO_ENTRY_ELECTRO = b'''
                 "album_id":"64251",
                 "album_name":"Gotta hold On",
                 "track_name":"Star (EM's Radio-Friendly Mix)",
-                "track_image":"https:\/\/imgjam.jamendo.com\/albums\/s64\/64251\/covers\/1.200.jpg",
+                "track_image":
+    "https:\/\/imgjam.jamendo.com\/albums\/s64\/64251\/covers\/1.200.jpg",
                 "artist_name":"eddie e feat eliza"
             },
             "callmeback":"54000"
