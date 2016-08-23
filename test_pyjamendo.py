@@ -1,6 +1,5 @@
 # Tests for pyjamendo
 # Requires py.test
-import json
 import pytest
 import pyjamendo
 from pyjamendo import jam_radios_to_m3u
