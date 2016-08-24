@@ -14,11 +14,11 @@
 #
 import json
 import logging
-try:                    # python 3.x
-    from urllib.parse import urlencode
+try:
+    from urllib.parse import urlencode     # python 3.x
     from urllib.request import urlopen
-except ImportError:     # python 2.x
-    from urllib import urlencode, urlopen
+except ImportError:                        # pragma: no cover
+    from urllib import urlencode, urlopen  # python 2.x
 
 __version__ = "0.1.1.dev0"
 
