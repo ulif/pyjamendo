@@ -67,5 +67,5 @@ def jam_radios_to_m3u():
                 stream_descr['dispname'], stream_url))
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     jam_radios_to_m3u()
