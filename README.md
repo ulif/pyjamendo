@@ -38,3 +38,15 @@ Afterwards, just do
 You can save the result as an `.m3u` file.
 
 Kudos to @schuellerf for fixing the output file format!
+
+
+## Running Tests
+
+The local tests can be run, with `py.test` installed. In a
+`virtualenv` this can be done with:
+
+    (venv) $ pip install pytest
+
+Afterwards, just run:
+
+    (venv) $ py.test
