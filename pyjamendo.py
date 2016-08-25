@@ -27,7 +27,7 @@ CLIENT_ID = '56d30c95'  # for testing only
 
 logger = logging.getLogger('pyjamendo')
 logger.addHandler(logging.NullHandler())
-## Uncomment for debugging
+# # Uncomment next line for debugging
 # logging.basicConfig(level=logging.DEBUG)
 
 
