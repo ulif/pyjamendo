@@ -126,5 +126,24 @@ def test_jam_radios_to_m3u(capfd, jamendo_api):
     out, err = capfd.readouterr()
     assert out.startswith("#EXTM3U")
     assert "EXTINF:-1, " in out
-    assert "https:" not in out   # how bad, we can test this
+
+
+def test_allow_https_links_option_default(capfd, jamendo_api):
+    jam_radios_to_m3u()  # default
+    out, err = capfd.readouterr()
+    assert "https:" in out
+    assert "http:" not in out
+
+
+def test_allow_https_links_option_on(capfd, jamendo_api):
+    jam_radios_to_m3u(allow_https_links=True)
+    out, err = capfd.readouterr()
+    assert "https:" in out
+    assert "http:" not in out
+
+
+def test_allow_https_links_option_off(capfd, jamendo_api):
+    jam_radios_to_m3u(allow_https_links=False)
+    out, err = capfd.readouterr()
+    assert "https:" not in out
     assert "http:" in out
