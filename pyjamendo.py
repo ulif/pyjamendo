@@ -44,7 +44,7 @@ def call_api(path, params):
     return json.loads(resp.read().decode('utf-8'))
 
 
-def jam_radios_to_m3u():
+def jam_radios_to_m3u(allow_https_links=True):
     """Prints an EXTM3U-formatted list of jamendo radio stations.
 
     Jamendo web API is used to ask and list the stations in a format
@@ -62,7 +62,9 @@ def jam_radios_to_m3u():
         logger.info('Station Details: %s' % details)
         details = details['results']
         for stream_descr in details:
-            stream_url = stream_descr['stream'].replace('https:', 'http:')
+            stream_url = stream_descr['stream']
+            if not allow_https_links:
+                stream_url = stream_url.replace('https:', 'http:')
             print("#EXTINF:-1, Jamendo - %s\n%s" % (
                 stream_descr['dispname'], stream_url))
 
