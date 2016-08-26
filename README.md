@@ -50,3 +50,11 @@ The local tests can be run, with `py.test` installed. In a
 Afterwards, just run:
 
     (venv) $ py.test
+
+You can use `pytest-cov` to check coverage. Install it (once) with
+
+    (venv) $ pip install pytest-cov
+
+and run coverage tests like this:
+
+    (venv) $ py.test --cov=pyjamendo.py
