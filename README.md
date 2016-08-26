@@ -58,3 +58,10 @@ You can use `pytest-cov` to check coverage. Install it (once) with
 and run coverage tests like this:
 
     (venv) $ py.test --cov=pyjamendo.py
+
+PEP8 and other standards-compatibility test can be run with `flake8`.
+
+    (venv) $ pip install flake8
+    (venv) $ flake8 pyjamendo.py test_pyjamendo.py
+
+If there is no output, everything is fine.
