@@ -1,10 +1,13 @@
-# pyjamendo
+pyjamendo
+*********
+
 List radio streams streamed by jamendo.com.
 
-## What's this?
+What's this?
+============
 
 https://jamendo.com/ distributes free music whereas "free" is defined
-as in [this faq](https://www.jamendo.com/faq).
+as in `this faq <https://www.jamendo.com/faq>`_.
 
 It also operates a couple of internet radios streaming free music.
 
@@ -19,11 +22,12 @@ script displays only ordinary, unencrypted http URLs. This is a
 shortcoming of `cmus` not of jamendo.
 
 
-## How to run
+How to run
+==========
 
-You might want to change the CLIENT_ID set in the script.
+You might want to change the ``CLIENT_ID`` set in the script.
 
-Afterwards, just do
+Afterwards, just do::
 
     $ python pyjamendo.py
         #EXTM3U
@@ -37,29 +41,30 @@ Afterwards, just do
 
 You can save the result as an `.m3u` file.
 
-Kudos to @schuellerf for fixing the output file format!
+Kudos to `@schuellerf` for fixing the output file format!
 
 
-## Running Tests
+Running Tests
+=============
 
 The local tests can be run, with `py.test` installed. In a
-`virtualenv` this can be done with:
+`virtualenv` this can be done with::
 
     (venv) $ pip install pytest
 
-Afterwards, just run:
+Afterwards, just run::
 
     (venv) $ py.test
 
-You can use `pytest-cov` to check coverage. Install it (once) with
+You can use `pytest-cov` to check coverage. Install it (once) with::
 
     (venv) $ pip install pytest-cov
 
-and run coverage tests like this:
+and run coverage tests like this::
 
     (venv) $ py.test --cov=pyjamendo.py
 
-PEP8 and other standards-compatibility test can be run with `flake8`.
+PEP8 and other standards-compatibility test can be run with `flake8`::
 
     (venv) $ pip install flake8
     (venv) $ flake8 pyjamendo.py test_pyjamendo.py
