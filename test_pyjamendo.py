@@ -2,7 +2,7 @@
 # Requires py.test
 import pytest
 import pyjamendo
-from pyjamendo import jam_radios_to_m3u
+from pyjamendo import jam_radios_to_m3u, main
 
 
 def fake_urlopen(url):
@@ -147,3 +147,11 @@ def test_allow_https_links_option_off(capfd, jamendo_api):
     out, err = capfd.readouterr()
     assert "https:" not in out
     assert "http:" in out
+
+
+def test_main(capfd, jamendo_api):
+    # we can call main() w/o hassle
+    main()
+    out, err = capfd.readouterr()
+    assert "EXTINF:-1, " in out
+    assert "https:" not in out
