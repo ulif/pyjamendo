@@ -1,8 +1,8 @@
 Changes
 =======
 
-0.2.dev0
---------
+0.2.dev0 (unreleased)
+---------------------
 
 - Added tests.
 
@@ -12,7 +12,7 @@ Changes
 - Introduced `main` function for better testing of script behavior.
 
 
-0.1
----
+0.1 (2016-08-19)
+----------------
 
 - First implementation.
