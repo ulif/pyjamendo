@@ -20,7 +20,7 @@ try:
 except ImportError:                        # pragma: no cover
     from urllib import urlencode, urlopen  # python 2.x
 
-__version__ = "0.1.1.dev0"
+__version__ = "0.2.dev0"
 
 BASE_URL = 'https://api.jamendo.com/v3.0'
 CLIENT_ID = '56d30c95'  # for testing only
