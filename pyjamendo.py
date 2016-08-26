@@ -73,6 +73,12 @@ def jam_radios_to_m3u(allow_https_links=True):
 
 
 def main():
+    """Called w/o any parameters when run as script.
+
+    Calls jam_radios_to_m3() with https-links turned into http links.
+
+    See docs of `jam_radios_to_m3u()` for details.
+    """
     jam_radios_to_m3u(allow_https_links=False)
 
 
