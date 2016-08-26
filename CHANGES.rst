@@ -1,5 +1,8 @@
-# Changes
-## 0.2.dev0
+Changes
+=======
+
+0.2.dev0
+--------
 
 - Added tests.
 
@@ -9,6 +12,7 @@
 - Introduced `main` function for better testing of script behavior.
 
 
-## 0.1
+0.1
+---
 
 - First implementation.
