@@ -77,4 +77,4 @@ def main():
 
 
 if __name__ == "__main__":  # pragma: no cover
-    jam_radios_to_m3u(allow_https_links=False)
+    main()
