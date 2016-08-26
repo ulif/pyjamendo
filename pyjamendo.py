@@ -50,6 +50,9 @@ def jam_radios_to_m3u(allow_https_links=True):
     Jamendo web API is used to ask and list the stations in a format
     suitable for players like `winamp`, `cmus`, etc.
 
+    If `allow_https_links` is False, any 'https' links are turned into
+    `http` ones.
+
     Requires online connection.
     """
     result = call_api('radios/', dict())
