@@ -11,6 +11,8 @@ Changes
 
 - Introduced `main` function for better testing of script behavior.
 
+- Added tests and travis-CI support.
+
 
 0.1 (2016-08-19)
 ----------------
