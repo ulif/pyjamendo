@@ -3,6 +3,13 @@ pyjamendo
 
 List radio streams streamed by jamendo.com.
 
+|bdg-build| | `sources <https://github.com/ulif/pyjamendo>`_ | `issues <https://github.com/ulif/pyjamendo/issues>`_
+
+.. |bdg-build| image:: https://travis-ci.org/ulif/pyjamendo.png?branch=master
+    :target: https://travis-ci.org/ulif/pyjamendo
+    :alt: Build Status
+
+
 What's this?
 ============
 
