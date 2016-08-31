@@ -54,7 +54,17 @@ Kudos to `@schuellerf` for fixing the output file format!
 Running Tests
 =============
 
-The local tests can be run, with `py.test` installed. In a
+``TL;DR``::
+
+   (venv) $ python setup.py test
+
+To run tests in all officially supported (and more) environments,
+including `flake8` and `coverage`, we use `tox`::
+
+   (venv) $ pip install tox  # (do this once)
+   (venv) $ tox
+
+The long story is as follows: The local tests can be run, with `py.test` installed. In a
 `virtualenv` this can be done with::
 
     (venv) $ pip install pytest
