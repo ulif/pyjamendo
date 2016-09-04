@@ -31,12 +31,12 @@ logger.addHandler(logging.NullHandler())
 # logging.basicConfig(level=logging.DEBUG)
 
 
-def call_api(path, params):
+def call_api(path, params, client_id=CLIENT_ID):
     """Call the Jamendo API with `params`.
 
     `params` are parameters in a `dict()`.
     """
-    params.update(dict(client_id=CLIENT_ID, format='jsonpretty'))
+    params.update(dict(client_id=client_id, format='jsonpretty'))
     params = urlencode(params)
     url = '%s/%s?%s' % (BASE_URL, path, params)
     logger.info('Calling %s' % url)
