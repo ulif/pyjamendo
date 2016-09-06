@@ -7,11 +7,13 @@ from pyjamendo import call_api, jam_radios_to_m3u, main
 
 def fake_urlopen(url):
     from io import BytesIO
-    if "radios/?" in url:
+    if not "client_id=56d30c95" in url:
+        result = BytesIO(SAMPLE_INVALID_CLIENT_ID)
+    elif "radios/?" in url:
         result = BytesIO(SAMPLE_RADIOS_RESP)
-    if "name=bestof" in url:
+    elif "name=bestof" in url:
         result = BytesIO(SAMPLE_RADIO_ENTRY_BESTOF)
-    if "name=electro" in url:
+    elif "name=electro" in url:
         result = BytesIO(SAMPLE_RADIO_ENTRY_ELECTRO)
     return result
 
@@ -119,6 +121,22 @@ SAMPLE_RADIO_ENTRY_ELECTRO = b'''
     ]
 }
 '''
+
+
+SAMPLE_INVALID_CLIENT_ID = b'''{
+	"headers":{
+		"status":"failed",
+		"code":5,
+		"error_message":"Jamendo Api Invalid Client Id Error: Your credential is not authorized.",
+		"warnings":"",
+		"results_count":0
+	},
+	"results":[
+
+	]
+}
+'''
+
 
 
 def test_jam_radios_to_m3u(capfd, jamendo_api):
