@@ -140,6 +140,7 @@ SAMPLE_INVALID_CLIENT_ID = b'''{
 
 
 def test_jam_radios_to_m3u(capfd, jamendo_api):
+    # we can generate a list of jamendo radio stations
     jam_radios_to_m3u()
     out, err = capfd.readouterr()
     assert out.startswith("#EXTM3U")
@@ -147,6 +148,7 @@ def test_jam_radios_to_m3u(capfd, jamendo_api):
 
 
 def test_allow_https_links_option_default(capfd, jamendo_api):
+    # https_lins option default works
     jam_radios_to_m3u()  # default
     out, err = capfd.readouterr()
     assert "https:" in out
@@ -154,6 +156,7 @@ def test_allow_https_links_option_default(capfd, jamendo_api):
 
 
 def test_allow_https_links_option_on(capfd, jamendo_api):
+    # https_lins option can be switched on
     jam_radios_to_m3u(allow_https_links=True)
     out, err = capfd.readouterr()
     assert "https:" in out
@@ -161,6 +164,7 @@ def test_allow_https_links_option_on(capfd, jamendo_api):
 
 
 def test_allow_https_links_option_off(capfd, jamendo_api):
+    # https_lins option can be switched off
     jam_radios_to_m3u(allow_https_links=False)
     out, err = capfd.readouterr()
     assert "https:" not in out
