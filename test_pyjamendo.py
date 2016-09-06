@@ -185,6 +185,15 @@ def test_call_api_invalid_client_id(jamendo_api):
     assert result["headers"]["results_count"] == 0
 
 
+def test_call_api_valid_client_id(jamendo_api):
+    # we can see if a client id is valid
+    result = call_api(
+        "radios/stream", dict(name="electro"), client_id="56d30c95")
+    assert result["headers"]["status"] == "success"
+    assert result["headers"]["code"] == 0
+    assert result["headers"]["results_count"] > 0
+
+
 def test_main(capfd, jamendo_api):
     # we can call main() w/o hassle
     main()
