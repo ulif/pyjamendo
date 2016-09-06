@@ -167,13 +167,22 @@ def test_allow_https_links_option_off(capfd, jamendo_api):
     assert "http:" in out
 
 
-def test_call_api(jamendo_api):
+def test_call_api_delivers_parsed_json_data(jamendo_api):
     # we can call the jamendo API and will get parsed JSON data.
     result = call_api(
         "radios/stream", dict(name="electro"))
     assert isinstance(result, dict)
     assert "headers" in result
     assert isinstance(result["results"], list)
+
+
+def test_call_api_invalid_client_id(jamendo_api):
+    # we can see if a client id is invalid
+    result = call_api(
+        "radios/stream", dict(name="electro"), client_id="nonsense")
+    assert result["headers"]["status"] == "failed"
+    assert result["headers"]["code"] == 5
+    assert result["headers"]["results_count"] == 0
 
 
 def test_main(capfd, jamendo_api):
