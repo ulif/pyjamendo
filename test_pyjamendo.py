@@ -127,7 +127,8 @@ SAMPLE_INVALID_CLIENT_ID = b'''{
     "headers":{
         "status":"failed",
         "code":5,
-        "error_message":"Jamendo Api Invalid Client Id Error: Your credential is not authorized.",
+        "error_message":
+   "Jamendo Api Invalid Client Id Error: Your credential is not authorized.",
         "warnings":"",
         "results_count":0
     },
@@ -136,7 +137,6 @@ SAMPLE_INVALID_CLIENT_ID = b'''{
     ]
 }
 '''
-
 
 
 def test_jam_radios_to_m3u(capfd, jamendo_api):
