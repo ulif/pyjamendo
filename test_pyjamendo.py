@@ -124,16 +124,16 @@ SAMPLE_RADIO_ENTRY_ELECTRO = b'''
 
 
 SAMPLE_INVALID_CLIENT_ID = b'''{
-	"headers":{
-		"status":"failed",
-		"code":5,
-		"error_message":"Jamendo Api Invalid Client Id Error: Your credential is not authorized.",
-		"warnings":"",
-		"results_count":0
-	},
-	"results":[
+    "headers":{
+        "status":"failed",
+        "code":5,
+        "error_message":"Jamendo Api Invalid Client Id Error: Your credential is not authorized.",
+        "warnings":"",
+        "results_count":0
+    },
+    "results":[
 
-	]
+    ]
 }
 '''
 
