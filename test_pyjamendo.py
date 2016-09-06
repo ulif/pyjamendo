@@ -7,7 +7,7 @@ from pyjamendo import call_api, jam_radios_to_m3u, main
 
 def fake_urlopen(url):
     from io import BytesIO
-    if not "client_id=56d30c95" in url:
+    if "client_id=56d30c95" not in url:
         result = BytesIO(SAMPLE_INVALID_CLIENT_ID)
     elif "radios/?" in url:
         result = BytesIO(SAMPLE_RADIOS_RESP)
