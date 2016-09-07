@@ -13,6 +13,9 @@ Changes
 
 - Added tests and travis-CI support.
 
+- Accept custom client id in API calls (must be registered with
+  Jamendo, of course).
+
 
 0.1 (2016-08-19)
 ----------------
