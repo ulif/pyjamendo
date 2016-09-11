@@ -25,7 +25,7 @@ docs_require = [
 
 setup(
     name="pyjamendo",
-    version="0.2",
+    version="0.2.1.dev0",
     author="Uli Fouquet",
     author_email="uli@gnufix.de",
     description=(
