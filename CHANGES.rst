@@ -4,7 +4,7 @@ Changes
 0.2.1.dev0 (unreleased)
 -----------------------
 
-- No changes yet.
+- Moved pytest config from `setup.cfg` to `tox.ini`.
 
 
 0.2 (2016-09-11)
