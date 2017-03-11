@@ -22,11 +22,11 @@ This script uses jamendo API (v3) to determine the URLs of radio
 streams. They are printed in a form suitable for m3u files. See
 https://developer.jamendo.com/v3.0/read-methods for docs.
 
-I use the listed URLs to create [extended m3u files]
-(https://en.wikipedia.org/wiki/M3U) which are then fed to `cmus`, my
-commandline music player. As `cmus` refuses to stream https URLs, the
+I use the listed URLs to create `extended m3u files`_
+( which are then fed to `cmus`_, my
+commandline music player. As `cmus`_ refuses to stream https URLs, the
 script displays only ordinary, unencrypted http URLs. This is a
-shortcoming of `cmus` not of jamendo.
+shortcoming of `cmus`_ not of jamendo.
 
 
 How to run
@@ -87,3 +87,6 @@ PEP8 and other standards-compatibility test can be run with `flake8`::
     (venv) $ flake8 pyjamendo.py test_pyjamendo.py
 
 If there is no output, everything is fine.
+
+.. _cmus: https://cmus.github.io/
+.. _extended m3u files: https://en.wikipedia.org/wiki/M3U
