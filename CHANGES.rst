@@ -6,6 +6,8 @@ Changes
 
 - Moved pytest config from `setup.cfg` to `tox.ini`.
 
+- Drop `pytest-cov` dependency. The raw `coverage` is enough.
+
 
 0.2 (2016-09-11)
 ----------------
