@@ -28,6 +28,14 @@ commandline music player. As `cmus`_ refuses to stream https URLs, the
 script displays only ordinary, unencrypted http URLs. This is a
 shortcoming of `cmus`_ not of jamendo.
 
+.. note:: Currently (March 2017) the radio stream URLs delivered by
+          jamendo.com API are broken, as stated here:
+
+              https://developer.jamendo.com/v3.0/radios/stream
+
+          This script relies on the jamendo API and cannot work while
+          the delivered links are broken.
+
 
 How to run
 ==========
